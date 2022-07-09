@@ -18,12 +18,24 @@
 }
 
 /* Reset styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 .link {
   text-decoration: none;
   color: currentColor;
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -47,8 +59,31 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* Base styles */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
 
 /* Hedear section */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.header-list {
+  display: flex;
+}
+
 .logo-link {
   font-family: var(--secondary-front);
   font-weight: 700;
@@ -56,8 +91,12 @@ body {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--logo-txt-cl);
+  margin-right: 93px;
 }
 
+.header-list {
+  margin-right: auto;
+}
 .logo-header-style {
   font-weight: 700;
   font-size: 26px;
@@ -66,7 +105,17 @@ body {
   color: var(--button-bg-cl);
 }
 
+.header-item {
+  margin-right: 50px;
+}
+
+.header-item:last-child {
+  margin-right: 0;
+}
+
 .header-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -76,8 +125,10 @@ body {
 
 .header-link:hover,
 .header-link:focus,
-.contacts-link:hover,
-.contacts-link:focus {
+.contacts-link-maill:hover,
+.contacts-link-maill:focus,
+.contacts-link:focus,
+.contacts-link:hover {
   color: var(--button-bg-cl);
 }
 
@@ -86,6 +137,8 @@ body {
 }
 
 .contacts-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -93,14 +146,30 @@ body {
   color: var(--p-txt-cl);
 }
 
+.header-contacts {
+  display: flex;
+}
+
+.contacts-link-maill {
+  margin-right: 50px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 /* Hero section */
 .hero {
   background-color: var(--dark-bg-cl);
+  text-align: center;
 }
 
 .main-title {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
   font-weight: 900;
   font-size: 44px;
+  width: 696px;
   line-height: calc(60 / 44);
   letter-spacing: 0.06em;
   color: var(--header-bg-cl);
@@ -108,6 +177,11 @@ body {
 }
 
 .hero-button {
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  margin-bottom: 200px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -128,6 +202,11 @@ body {
 }
 
 /* About section */
+
+.about-list {
+  display: flex;
+}
+
 .about-title {
   font-weight: 700;
   font-size: 14px;
